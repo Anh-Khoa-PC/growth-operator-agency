@@ -1,0 +1,6 @@
+[submodule "okx-wallet-reentrancy-poc/lib/forge-std"]
+	path = okx-wallet-reentrancy-poc/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "okx-wallet-reentrancy-poc/lib/openzeppelin-contracts"]
+	path = okx-wallet-reentrancy-poc/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
