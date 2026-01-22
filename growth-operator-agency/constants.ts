@@ -1,109 +1,102 @@
-import { Brain, ThumbsUp, Users, Smartphone, Monitor, Mail, Box, Activity, Settings, DollarSign, Clock, Layers, ShieldCheck, MousePointerClick } from 'lucide-react';
-import { ServiceItem, MetricItem, WorkItem, FAQItem, NavLink } from './types';
+import { Brain, ThumbsUp, Users, Smartphone, Monitor, Mail, Box, Activity, Settings, DollarSign, Clock, Layers, ShieldCheck, MousePointerClick, Zap, Target } from 'lucide-react';
+import { ServiceItem, MetricItem, WorkItem, FAQItem, NavLink, TestimonialItem } from './types';
 
 export const COMPANY_NAME = "Growth Operator Agency";
 
 export const NAV_LINKS: NavLink[] = [
-  { name: 'Why Us', href: '#benefits' },
-  { name: 'Services', href: '#solutions' },
-  { name: 'Results', href: '#works' },
+  { name: 'Why Us', href: '#why-us' },
+  { name: 'Solutions', href: '#solutions' },
+  { name: 'Features', href: '#features' },
   { name: 'Process', href: '#process' },
 ];
 
 export const HERO_CONTENT = {
-  badge: "Limited Client Capacity",
-  headline: "Growth Operator Agency",
-  subheadline: "We guarantee to add $10,000 to your monthly recurring revenue by launching and growing your paid community within 90 days.",
-  cta: "BOOK A CALL"
+  badge: "Limited Client Capacity. Spoiler: It never does.",
+  headlinePart1: "We create your offer from A to Z, market it,",
+  headlinePart2: "and scale it to over €30,000/month in under 60 days.",
+  subheadline: "You pay nothing, only result commission.",
+  cta: "Apply Now"
 };
 
-export const MISSION_CONTENT = {
-  badge: "Our Mission",
-  headline: "Helping Influencers Monetize Their Audience",
-  subheadline: "Completely different from any agency you've worked with before. We provide seamless support, making it easy for you to monetize while you focus on creating quality content.",
-  cta: "BOOK A CALL"
-};
-
+// "Why Us" Section Content
 export const BENEFITS: ServiceItem[] = [
   {
-    title: "Effortless Management",
-    description: "We handle everything, from creating digital assets to setting up landing pages and managing ads.",
-    icon: ThumbsUp
+    title: "Built By Experts",
+    description: "Leverage our industry expertise to scale your digital products with proven strategies and insights.",
+    icon: Brain,
   },
   {
-    title: "Guaranteed Results",
-    description: "If you don't hit $10,000/month within 90 days, we work for free until you do.",
-    icon: ShieldCheck
+    title: "Seamless Solutions",
+    description: "We handle everything from complex funnels, AI automations, and community management so you can focus on what matters most.",
+    icon: ThumbsUp,
   },
   {
-    title: "Expert Built",
-    description: "Our goal is to help convert followers into sustainable passive income streams.",
-    icon: Users
+    title: "Ongoing Partnership",
+    description: "We provide continuous support and optimisation to ensure long term success and sustainable growth.",
+    icon: Users,
   }
 ];
 
+// "Complete Backend Solutions" - Updated to match screenshot
 export const SOLUTIONS: ServiceItem[] = [
   {
-    title: "Digital Asset Creation",
-    description: "Monetize your following effectively and professionally.",
-    icon: Layers
+    title: "Stress Less",
+    description: "We handle all backend tasks and sales operations so you can focus on growing your business",
+    icon: Box 
   },
   {
-    title: "Asset Management",
-    description: "Reduce your workload and optimize operations.",
-    icon: Box
-  },
-  {
-    title: "Process Automation",
-    description: "Automate paywalls and fulfillment workflows.",
+    title: "Proven Systems",
+    description: "Our proven frameworks turn your knowledge into profitable digital products within weeks not months",
     icon: Settings
   },
   {
-    title: "Landing Page Creation",
-    description: "High-converting designs to capture and convert traffic.",
-    icon: MousePointerClick
-  },
-  {
-    title: "24/7 Support",
-    description: "Fast resolution ensuring your systems are always online.",
-    icon: Clock
-  },
-  {
-    title: "Paid Ads Management",
-    description: "Expand your reach through effective advertising campaigns.",
-    icon: Monitor
+    title: "Smart Automation",
+    description: "We set up automations that nurture leads and convert customers while you sleep",
+    icon: Zap
   }
 ];
 
-// Re-using specific content for layout structure
 export const SERVICES: ServiceItem[] = SOLUTIONS;
 
-export const RECENT_WORKS: WorkItem[] = [
+// Bento Grid Content
+export const BENTO_FEATURES = [
   {
-    name: "Fitness Coach",
-    description: "Increased annual income by over $100k using our system.",
-    platforms: ['instagram', 'youtube']
+    title: "Effortless Management",
+    description: "We handle everything from creating digital assets to setting up high-converting landing pages and managing ad campaigns, so you don't have to.",
+    icon: Settings, 
+    colSpan: "md:col-span-1"
   },
   {
-    name: "Content Creator",
-    description: "Built a paid community generating $15k/month.",
-    platforms: ['tiktok', 'link']
+    title: "Guaranteed Results",
+    description: "If you don't reach $10,000 monthly revenue in 90 days, we'll work for free until you do.",
+    icon: ShieldCheck,
+    colSpan: "md:col-span-1"
+  },
+  {
+    title: "Done-For-You Sales",
+    description: "We recruit, train, and place top-tier sales closers to handle your leads and close deals for you 24/7.",
+    icon: Users,
+    colSpan: "md:col-span-1"
+  },
+  {
+    title: "Proven Track Record",
+    description: "Coaches and influencers have scaled to $100,000+ annually using our system when working with us.",
+    icon: Activity,
+    colSpan: "md:col-span-1",
+    isStatsCard: true
   }
 ];
 
-export const WORK_METRICS: MetricItem[] = [
-  { value: "100K+", label: "Added Annual Revenue" },
-  { value: "90 Days", label: "To Reach $10k/mo" },
-  { value: "24/7", label: "Technical Support" },
-  { value: "100%", label: "Focus On Content" }
+export const AGENCY_STATS = [
+  { label: "Current Client Count", value: "12" },
+  { label: "Average Time to Launch", value: "9 Days" },
+  { label: "Average MMR per Client", value: "$13,892" },
+  { label: "Digital Assets Created", value: "54" },
 ];
 
-export const METRICS: MetricItem[] = [
-  { value: "12", label: "Current Clients" },
-  { value: "9 Days", label: "Avg Launch Time" },
-  { value: "$13,892", label: "Avg Monthly Revenue" },
-  { value: "54", label: "Digital Assets Created" }
-];
+export const RECENT_WORKS: WorkItem[] = [];
+export const WORK_METRICS: MetricItem[] = []; 
+export const METRICS: MetricItem[] = [];
 
 export const PROCESS_STEPS = [
   {
@@ -119,28 +112,7 @@ export const PROCESS_STEPS = [
   {
     number: "03",
     title: "Launch & Scale",
-    description: "Launch the community and optimize ads to hit revenue targets."
-  }
-];
-
-export const TESTIMONIALS = [
-  {
-    quote: "Growth Operator Agency took the technical weight off my shoulders. I just make videos, and the money hits my account.",
-    author: "Michael T.",
-    role: "Fitness Coach",
-    company: "FitLife"
-  },
-  {
-    quote: "The revenue guarantee is real. Within 2 months I surpassed the $10,000 recurring revenue mark.",
-    author: "Sarah J.",
-    role: "Content Creator",
-    company: "Lifestyle Vlog"
-  },
-  {
-    quote: "24/7 support is incredibly fast. A truly reliable partner.",
-    author: "David Chen",
-    role: "Business Consultant",
-    company: "BizGrowth"
+    description: "We launch ads, deploy the sales team, and optimize to hit revenue targets."
   }
 ];
 
@@ -151,7 +123,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "How does the $10,000 guarantee work?",
-    answer: "If after 90 days of partnership our system hasn't added at least $10,000/month to your revenue, we continue working for free until it does."
+    answer: "If after 90 days of partnership our system hasn't added at least $10,000/month to your revenue, we continue working for free until it does. Spoiler: It never does."
   },
   {
     question: "Do I need technical skills?",
@@ -159,12 +131,39 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "Who is this service for?",
-    answer: "It's for influencers (KOLs, KOCs, Coaches) who have an existing following and want to convert it into sustainable income."
+    answer: "It's for influencers (KOCs, Coaches) who have an existing following and want to convert it into sustainable income."
   }
 ];
+
+export const TESTIMONIALS: TestimonialItem[] = [
+  {
+    quote: "Working with Growth Operator was the best decision I made for my personal brand. They handled everything.",
+    author: "Sarah Jenkins",
+    role: "Lifestyle Coach",
+    company: "SJ Coaching"
+  },
+  {
+    quote: "The revenue guarantee gave me peace of mind, but the results blew me away. We hit the target in 45 days.",
+    author: "David Chen",
+    role: "Content Creator",
+    company: "TechDaily"
+  },
+  {
+    quote: "I was drowning in tech stack decisions. They came in, built the infrastructure, and I just focused on my community.",
+    author: "Amanda Ray",
+    role: "Fitness Influencer",
+    company: "FitLife"
+  }
+];
+
+export const MISSION_CONTENT = {
+  headline: "We are the backend for your personal brand.",
+  subheadline: "Stop wasting time on tech stacks and operational headaches. We build the systems so you can focus on your community.",
+  cta: "See How It Works"
+};
 
 export const FOOTER_CTA = {
   headline: "Book your call today.",
   subheadline: "Start earning tomorrow. We help you monetize your influence.",
-  cta: "BOOK A CALL"
+  cta: "Apply Now"
 };

@@ -7,6 +7,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 const FAQ: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  const highlightSpoiler = (text: string) => {
+    const spoilerPhrase = "Spoiler: It never does.";
+    if (text.includes(spoilerPhrase)) {
+      const parts = text.split(spoilerPhrase);
+      return (
+        <span>
+          {parts[0]}
+          <span className="text-brand-orange font-extrabold italic">{spoilerPhrase}</span>
+          {parts[1]}
+        </span>
+      );
+    }
+    return text;
+  };
+
   return (
     <SectionWrapper id="faq" className="bg-black">
       <div className="text-center mb-16">
@@ -43,7 +58,7 @@ const FAQ: React.FC = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="pb-8 pt-2 text-gray-500 leading-relaxed">
-                    {faq.answer}
+                    {highlightSpoiler(faq.answer)}
                   </div>
                 </motion.div>
               )}

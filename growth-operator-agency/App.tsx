@@ -17,9 +17,9 @@ function App() {
       <main>
         <Hero />
         <Mission />
-        <Benefits />
-        <Solutions />
-        <Works />
+        <Benefits /> {/* "Why Us" - Small/Big Layout */}
+        <Solutions /> {/* "Complete Backend" */}
+        <Works /> {/* "Bento Grid Features" */}
         <Process />
         <FAQ />
         <CTA />

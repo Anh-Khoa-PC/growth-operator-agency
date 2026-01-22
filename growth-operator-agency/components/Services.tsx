@@ -19,9 +19,10 @@ const Services: React.FC = () => {
         {SERVICES.map((service, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: index * 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="group relative p-8 rounded-2xl bg-[#030303] border border-white/5 hover:border-brand-orange/30 transition-all duration-300 hover:bg-[#050505] overflow-hidden"
           >
              {/* Subtle Noise Texture */}

@@ -1,7 +1,6 @@
 import React from 'react';
 import SectionWrapper from './ui/SectionWrapper';
 import { PROCESS_STEPS } from '../constants';
-import Button from './ui/Button';
 
 const Process: React.FC = () => {
   return (
@@ -14,7 +13,6 @@ const Process: React.FC = () => {
           <p className="text-gray-400 text-lg mb-8">
             Our proprietary 3-step framework is designed to remove you from the day-to-day operations while skyrocketing your revenue.
           </p>
-          <Button variant="outline">See The Roadmap</Button>
         </div>
 
         <div className="space-y-8">

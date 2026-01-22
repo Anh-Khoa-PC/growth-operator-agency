@@ -5,6 +5,7 @@ export interface ServiceItem {
   description: string;
   icon?: LucideIcon;
   image?: string; // For solutions section which might use images
+  colSpan?: string; // Added for Bento Grid layouts
 }
 
 export interface MetricItem {
@@ -26,4 +27,11 @@ export interface FAQItem {
 export interface NavLink {
   name: string;
   href: string;
+}
+
+export interface TestimonialItem {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
 }
